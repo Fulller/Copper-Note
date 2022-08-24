@@ -1,0 +1,135 @@
+*{
+    background-color: #202124;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+}
+::-webkit-scrollbar {
+    width: 4px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+::-webkit-scrollbar-thumb {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 0px;
+ }
+#create{
+    display: flex;
+    flex-direction: column;
+
+    width: 500px;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+}
+#create-header{
+    display: flex;
+    margin-bottom: 12px;
+}
+#create-title-input{
+    flex: 1;
+    border: none;
+    outline: none;
+    width: auto;
+    font-size: 20px;
+    color: rgb(246, 131, 131);
+    padding: 6px 6px 6px 0px;
+}
+#create-save{
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    padding: 6px;
+    color: rgba(255, 255, 255, 0.5);
+}
+#create-content-textarea{
+    resize: none;
+    outline: none;
+    border: none;
+}
+
+#show{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.show-note{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+    margin-top: 24px;
+}
+.show-header{
+    display: flex;
+    margin-bottom: 12px;
+}
+.show-title-input{
+    flex: 1;
+    border: none;
+    outline: none;
+    width: auto;
+    font-size: 20px;
+    color: rgb(131, 131, 247);
+    padding: 6px 6px 6px 0px;
+}
+.show-save{
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 6px;
+    border-radius: 6px;
+    margin-left: 6px;
+}
+.show-delete{
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+    color: rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+    padding: 6px;
+}
+.show-content-textarea{
+    resize: none;
+    outline: none;
+    border: none;
+}
+.show-note:hover .show-control{
+    visibility: visible;
+    animation: faceIn 1s linear;
+}
+@keyframes faceIn {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 550px) and (min-width: 451px) {
+    #create{
+        width: 350px;
+    }
+    #show{
+        width: 350px;
+    }
+}
+@media screen and (max-width: 450px) {
+    #create{
+        width: 300px;
+    }
+    #show{
+        width: 300px;
+    }
+}
