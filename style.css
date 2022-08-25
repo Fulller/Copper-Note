@@ -1,5 +1,4 @@
 *{
-    background-color: #202124;
     margin: 0;
     padding: 0;
     color: white;
@@ -18,8 +17,18 @@
     background: rgba(255, 255, 255, 0.1);
     border-radius: 2px;
 }
+input{
+    background-color: transparent;
+}
+textarea{
+    background-color: transparent;
+}
+body{
+    background-color: #202124;
+}
 main{
     display: flex;
+    background-color: #202124;
     flex-direction: column;
     align-items: center;
     padding: 32px 0px;
@@ -64,6 +73,21 @@ main{
     flex-direction: column;
     align-items: center;
 }
+.show-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+}
+.show-footer i{
+    color: rgba(255, 255, 255, 0.5);
+    margin-right: 10px;
+}
+.show-bonus-background{
+    display: inline-block;
+    position: relative;
+    
+}
 .show-note{
     width: 100%;
     display: flex;
@@ -72,6 +96,47 @@ main{
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 6px;
     margin-top: 24px;
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.show-img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.show-img-block{
+    position: relative;
+}
+
+.fa-trash-can{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.509);
+    bottom: 10px;
+    right: 10px;
+    padding: 6px;
+    font-size: 10px;
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.5);
+    visibility: hidden;
+}
+.show-img-block:hover .fa-trash-can{
+    animation: show 1s;
+    visibility: visible;
+}
+@keyframes show {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+.show-img-item{
+    height: 200px;
+    max-width: 100%;
+    object-fit: contain;
+    margin: 0px 3px 6px 3px;
+    border-radius: 5px;
 }
 .show-header{
     display: flex;
@@ -94,21 +159,33 @@ main{
     border-radius: 6px;
     margin-left: 6px;
 }
+.show-control{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
 .show-delete{
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 3px;
     color: rgba(255, 255, 255, 0.5);
     border-radius: 6px;
-    padding: 6px;
+    padding: 3px;
+    font-size: 10px;
+    margin-left: 10px;
+}
+.show-ghim{
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+    color: rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+    padding: 3px;
+    font-size: 10px;
+    margin-left: 10px;
 }
 .show-content-textarea{
     resize: none;
     outline: none;
     border: none;
-}
-.show-note:hover .show-control{
-    visibility: visible;
-    animation: faceIn 1s linear;
 }
 @keyframes faceIn {
     from{
@@ -132,4 +209,16 @@ main{
     #show{
         width: 300px;
     }
+}
+.show-bonus-background-list{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: -20px;
+    margin-left: 30px;
+    padding: 8px;
+    box-shadow: 0px 0px 5px black;
+    border-radius: 12px;
+    background-color: #202124;
+    display: none;
 }
