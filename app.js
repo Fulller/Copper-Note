@@ -111,7 +111,7 @@ let app = {
             let can = e.target.closest('.fa-trash-can')
             if(can){
                 let imgIndex = can.getAttribute('imgIndex')
-                data[index].img.splice(inputImg,1)
+                data[index].img.splice(imgIndex,1)
                 app.render(data)
                 app.saveData()
             }
@@ -121,11 +121,11 @@ let app = {
         show.innerHTML = data.map((item,index)=>{
             let showImg = ''
             if(item.img){
-                showImg = item.img.map((image,index)=>{
+                showImg = item.img.map((image,indexImg)=>{
                     return `
                         <div class="show-img-block">
                             <img src="${image}" alt="image" class="show-img-item">
-                            <i class="fa-regular fa-trash-can" indexImg="${index}"></i>
+                            <i class="fa-regular fa-trash-can" imgIndex="${indexImg}"></i>
                         </div>
                     `
                 }).join('')
